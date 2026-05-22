@@ -1,18 +1,18 @@
 {
-    "name": "snake-game",
-    "owner": {
-      "name": "Julien Poitout",
-      "email": ""
-    },
-    "plugins": [
-      {
-        "name": "snake-game",
-        "source": "https://github.com/julienpoitout/claude-code-snake/tree/main",
-        "description": "Play Snake in a separate terminal while Claude Code works; pauses when Claude finishes a turn.",
-        "version": "1.0.0",
-        "author": {
-          "name": "Julien Poitout"
-        }
+  "name": "claude-snake",
+  "description": "Play Snake in a separate terminal while Claude Code works.",
+  "owner": {
+    "name": "Julien Poitout"
+  },
+  "plugins": [
+    {
+      "name": "claude-snake",
+      "description": "Play Snake in a separate terminal while Claude Code works; pauses when Claude finishes a turn.",
+      "version": "1.0.0",
+      "source": "./",
+      "author": {
+        "name": "Julien Poitout"
       }
-    ]
-  }
+    }
+  ]
+}

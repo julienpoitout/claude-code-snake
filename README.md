@@ -9,14 +9,31 @@ Play **Snake in a separate terminal window** while Claude Code works on your pro
 
 ## Install
 
-### As a plugin (recommended)
+### From the plugin marketplace (recommended)
+
+In Claude Code:
+
+1. `/plugin` → **Marketplaces** → **Add marketplace**
+2. Enter: `julienpoitout/claude-code-snake`
+3. Install plugin: `claude-snake` from that marketplace
+
+Or from a terminal:
 
 ```bash
-git clone https://github.com/julienpoitout/claude-snake.git
-claude --plugin-dir /path/to/claude-snake
+claude plugin marketplace add julienpoitout/claude-code-snake
+claude plugin install claude-snake@claude-snake
 ```
 
-Or add the repo via the `/plugin` UI in Claude Code.
+Then run `/reload-plugins` and verify with `/hooks`.
+
+**Note:** The plugin `source` in `marketplace.json` must be `./` (a path inside the repo), not a GitHub web URL like `https://github.com/.../tree/main`. Using a browser URL causes: *"This plugin uses a source type your Claude Code version does not support."*
+
+### Local development
+
+```bash
+git clone https://github.com/julienpoitout/claude-code-snake.git
+claude --plugin-dir /path/to/claude-code-snake
+```
 
 ### Verify hooks
 
