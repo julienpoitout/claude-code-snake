@@ -12,7 +12,7 @@ Play **Snake in a separate terminal window** while Claude Code works on your pro
 ### As a plugin (recommended)
 
 ```bash
-git clone https://github.com/YOUR_ORG/claude-snake.git
+git clone https://github.com/julienpoitout/claude-snake.git
 claude --plugin-dir /path/to/claude-snake
 ```
 
@@ -28,13 +28,15 @@ In Claude Code, run `/hooks` and confirm these events are registered:
 
 ## How it works
 
-| When | What happens |
-|------|----------------|
-| You **submit a prompt** | A dialog asks to play Snake (or continue / new game if paused) |
-| **Claude is working** | Snake runs in a separate terminal window |
-| **Claude finishes** | `Stop` hook pauses the game and shows a PAUSED banner |
-| **Next prompt** | Choose Continue, New game, or Don't play |
-| **Resume session** with a paused save | `SessionStart` offers Continue / New / Don't play |
+
+| When                                  | What happens                                                   |
+| ------------------------------------- | -------------------------------------------------------------- |
+| You **submit a prompt**               | A dialog asks to play Snake (or continue / new game if paused) |
+| **Claude is working**                 | Snake runs in a separate terminal window                       |
+| **Claude finishes**                   | `Stop` hook pauses the game and shows a PAUSED banner          |
+| **Next prompt**                       | Choose Continue, New game, or Don't play                       |
+| **Resume session** with a paused save | `SessionStart` offers Continue / New / Don't play              |
+
 
 State is stored per session at:
 
@@ -65,7 +67,7 @@ node game/daemon.js --session test-session
 - Hooks cannot draw into Claude's terminal; a detached process is required.
 - **Don't play** applies for the rest of the Claude session (per `session_id`).
 - `UserPromptSubmit` runs before each prompt and may show a dialog unless you opted out.
-- `SessionEnd` is not used for pause; **`Stop`** pauses when the agent finishes responding.
+- `SessionEnd` is not used for pause; `**Stop`** pauses when the agent finishes responding.
 
 ## License
 
