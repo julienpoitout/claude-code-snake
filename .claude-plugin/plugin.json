@@ -1,0 +1,8 @@
+{
+  "name": "claude-snake",
+  "description": "Play Snake in a separate terminal while Claude Code works; pauses when Claude finishes a turn.",
+  "version": "1.0.0",
+  "author": {
+    "name": "claude-snake contributors"
+  }
+}

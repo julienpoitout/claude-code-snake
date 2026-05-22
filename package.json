@@ -1,0 +1,13 @@
+{
+  "name": "claude-snake",
+  "version": "1.0.0",
+  "description": "Claude Code plugin: Snake while Claude works",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test game/engine.test.js"
+  },
+  "private": true
+}
