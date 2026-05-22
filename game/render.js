@@ -26,7 +26,7 @@ export function renderFrame(state, { paused = false, gameOver = false } = {}) {
     ? "PAUSED — Claude finished. Submit another prompt to continue."
     : gameOver
       ? "GAME OVER — press R to restart"
-      : "Arrow keys to move · P pause";
+      : "WASD keys to move · P pause";
   lines.push(`Score: ${state.score}  |  ${status}`);
 
   return lines.join("\n");
